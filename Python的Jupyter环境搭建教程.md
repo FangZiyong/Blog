@@ -48,13 +48,19 @@ pip install jupyter
 
 Jupyter是个编程环境，名字来源于三个字母，分别是Julia，Python，R，说明它可以为这三种编程语言提供编程环境。
 
-1. 打开jupyter-notebook。jupyter-notebook位于python的安装目录下的Scripts中，如果是默认安装，则应该位于**C:\Users\[你的用户名]\AppData\Local\Programs\Python\Python37\Scripts**中，双击jupyter-notebook后会弹出一个黑色的窗口，不用管，稍等一会在你的默认浏览器打开一个网页，这里就是你的编程环境了。
+1. 打开jupyter-notebook。jupyter-notebook位于python的安装目录下的Scripts中，如果是默认安装，则应该位于
+
+   ```
+   C:\Users\[你的用户名]\AppData\Local\Programs\Python\Python37\Scripts
+   ```
+
+   中，双击jupyter-notebook后会弹出一个黑色的窗口，不用管，稍等一会在你的默认浏览器打开一个网页，这里就是你的编程环境了。
 
 2. 点击右上角的**New**，并选择**Python 3**，即可生成一个新的笔记本，并打开一个标签，接下来就可以在方格中输入python代码运行程序了。
 
 
 
-一些问答：
+## 一些问答
 
 1. 如何知道自己是否安装了某个库？
 
@@ -81,5 +87,26 @@ Jupyter是个编程环境，名字来源于三个字母，分别是Julia，Pytho
 
    总结就是，如果是因为缺少某一个库的原因报错，那么肯定会出现**ModuleNotFoundError: No module named '库名'**这样的报错。
 
+3. 使用pip安装库时出现“**pip不是内部或外部命令，也不是可运行的程序或批处理文件**"怎么办？
 
+   答：出现这种错误的原因是pip所在的目录没有添加到环境变量，解决方法有两个，一是在pip所在的文件夹运行安装命令，但是每次都切换文件夹很麻烦，这里介绍如何把pip所在的路径添加到环境变量。
 
+   1. 复制pip所在的路径，如果是默认安装应该在
+
+      ```
+      C:\Users\[你的用户名]\AppData\Local\Programs\Python\Python37\Scripts
+      ```
+
+      如果没找到推荐使用**Listary**找到。
+
+   2. 右键单击**我的电脑**或者**此电脑**，点击**属性**。
+
+   3. 在跳出的窗口种的左边选中**高级系统设置**，在新跳出的窗口中选择**环境变量**。
+
+   4. 选中下方系统变量的Path，点击编辑。
+
+   5. 如果是较新的windows系统，界面较为友好，点击新建，粘贴pip所在的路径即可。
+
+      如果是较旧的系统，点击编辑之后不要删除怕烫之前已经存在的内容，直接在最后添加一个英文分号，再粘贴pip的路径即可。
+
+   6. 一路确认即可。
